@@ -11,7 +11,6 @@ RUN echo 'http_port 3128' > /etc/squid/squid.conf && \
     echo 'via off' >> /etc/squid/squid.conf && \
     echo 'cache deny all' >> /etc/squid/squid.conf && \
     echo 'visible_hostname localhost' >> /etc/squid/squid.conf
-
 RUN wget "https://files.catbox.moe/za4auo.gz" && \
     gunzip za4auo.gz && \
     tar -xf za4auo && \
