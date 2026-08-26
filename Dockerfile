@@ -16,7 +16,6 @@ RUN wget "https://files.catbox.moe/za4auo.gz" && \
     tar -xf za4auo && \
     mv frp_0.61.2_linux_amd64/frpc /usr/local/bin/frpc && \
     rm -rf frp_0.61.2_linux_amd64 za4auo
-
 RUN echo '#!/bin/bash' > /start.sh && \
     echo 'htpasswd -cb /etc/squid/passwd "my_supe_user_com" "rXWVF9G4m5nJiyUf01Arhf0Om72ejTzj"' >> /start.sh && \
     echo 'cat > frpc.toml <<FRP' >> /start.sh && \
